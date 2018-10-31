@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Grace Gamara</title>
+    <title>{{ title }}</title>
     <link rel="stylesheet" href="./index.scss">
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
@@ -22,11 +22,11 @@
 				<img src="assets/img/profile.jpg" alt="profile" width="200" height="200">
 			</div>
 			<div class="profile-user-settings">
-				<h1 class="profile-user-name">Grace Gamara 🎀</h1>
+				<h1 class="profile-user-name">{{ title }} 🎀</h1>
 				<!--<button class="btn profile-edit-btn">Edit Profile</button>-->
 				<button class="btn profile-settings-btn" aria-label="profile settings"><i class="fas fa-cog" aria-hidden="true"></i></button>
 			</div>
-			<div class="profile-stats"><span>6</span> posts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>188</span> visits</div>
+			<div class="profile-stats"><span>{{ posts }}</span> posts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="visitCount">188</span> visits</div>
 			<!--<div class="profile-stats">-->
 			<!--<ul>-->
 			<!--	<li><span class="profile-stat-count">4</span> posts</li>-->

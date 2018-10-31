@@ -1,0 +1,10 @@
+{
+  "plugins": {
+    "posthtml-expressions": {
+      locals: { 
+        title: "Grace Gama",
+        posts: 7
+      }
+    }
+  }
+}

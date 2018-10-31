@@ -1,3 +1,25 @@
+/* global fetch */
+
+function visit() {
+  let vc = document.getElementById("visitCount");
+  vc.innerHTML = 777;
+  let u = 'https://learn-gracegamara.c9users.io:8082/.netlify/functions/test1';
+  console.log('visit', u);
+  fetch(u, {
+    method: "GET",
+    mode: "cors",
+    cache: "no-cache",
+    credentials: "same-origin",
+    redirect: "follow", // manual, *follow, error
+    referrer: "no-referrer", // no-referrer, *client
+  })
+  .then(res => res.json())
+  .then(res => {
+    vc.innerHTML = 'res.status';
+  })
+  .catch(error => console.error('ErrorX:', error));
+}
+
 function createFolder() {
   let cf = document.getElementById("createFolderInput");
   let cfm = document.getElementById("createFolderMsg");
@@ -20,10 +42,10 @@ function createFolder() {
     cfm.innerHTML = res.status;
   })
   .catch(error => console.error('Error:', error));
-};
+}
 
 (function(){
-  console.log('start');
+  visit();
   document.getElementById("createFolderSubmit").addEventListener("click", function(e) {
     e.preventDefault();
     createFolder();
